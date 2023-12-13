@@ -1,4 +1,4 @@
-//* PRIMER PRE-ENTREGA
+//* PRIMER PRE-ENTREGA Calculador de promedio
 let nombre = prompt ("Ingrese su nombre").toLowerCase();
 let categoria = prompt("Ingrese si es estudiante o profesor").toLowerCase();
 
@@ -6,7 +6,6 @@ let categoria = prompt("Ingrese si es estudiante o profesor").toLowerCase();
 while (categoria != "estudiante"){
     alert(`Hola ${nombre} esta seccion no es para profesores`);
 
-    let nombre = prompt ("Ingrese su nombre");
     let categoria = prompt("Ingrese si es estudiante o profesor");
 }
 
