@@ -32,8 +32,7 @@ if(buscadorNombre === ingresados){
     alert(`Alumno no encontrado`)
 }
 buscadorNombre = prompt("Ingrese nombre del alumno que busca")
-
-//const buscado = ingresados.find(nombre => nombre.id === 3)
+// No pude generar el buscador de nombres no me estaria saliendo queria saber si me podria dar una ayuda de como lograrlo
 console.log(ingresados) 
 
 
