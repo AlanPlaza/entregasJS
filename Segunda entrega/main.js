@@ -24,20 +24,6 @@ const ingresados = [
 { id: 3, nombre: "Maximiliano" , apellido: "Rodriguez"},
 { id: 4, nombre: "Lautaro" , apellido: "Lopez"}];
 
-let container = document.getElementById("contenedor")
-container.innerHTML = `<h2>Nombre de alumnos</h2>`
-
-
-for (const ingreso of ingresados) {
- let contenedor = document.createElement("div");
- //Definimos el innerHTML del elemento con una plantilla de texto
-
- contenedor.innerHTML = `
- <h3> Numero de alumno ${ingreso.id}</h3>
- <p> Nombre: ${ingreso.nombre}</p>
- <p> Apellido ${ingreso.apellido}</p>`;
- document.body.appendChild(contenedor);
-}
 
 let buscadorNombre = prompt("Ingrese nombre del alumno que busca")
 
