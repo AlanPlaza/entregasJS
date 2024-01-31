@@ -8,6 +8,9 @@ class Alumno {
     }
 }
 
+let titulo = document.getElementById("titulo");
+titulo.innerHTML = `<h4>ingrese sus datos para poder inscribirse</h4>`
+
 const arreglo = [];
 
 let formulario = document.getElementById("formulario");
@@ -15,9 +18,6 @@ formulario.addEventListener("submit", (e) => {
     e.preventDefault();
 
     let inputs = e.target.children;
-    //console.log(inputs[0].value);
-    //console.log(inputs[1].value);
-    //console.log(inputs[2].value);
 
 if (!inputs[2].value.includes("@")){
     inputs[2].value = "";
@@ -31,18 +31,6 @@ if (inputs[0].value != "" && inputs[1].value != "" && inputs[2].value != ""){
 });
 
 
-
-
-/*for (let i = 0; i < 3; i++){
-let nombre = prompt("Ingrese nombre del alumno")
-let apellido = prompt("Ingrese apellido del alumno")
-
-let alumno  = new Alumno(nombre, apellido);
-alumnos.push(alumno)
-}
-console.log(alumnos);*/
-
-
 const ingresados = [
 { id: 1, nombre: "Jose", apellido: "Alvarez" },
 { id: 2, nombre: "Nicolas", apellido:"Gimenez" },
@@ -50,6 +38,7 @@ const ingresados = [
 { id: 4, nombre: "Lautaro" , apellido: "Lopez"}];
 
 const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
+const alumnosIngresados = JSON.parse(localStorage.getItem("ingresados"))
 
 guardarLocal("listaDeAlumnos", JSON.stringify(ingresados));
 console.log(ingresados);
